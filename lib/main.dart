@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -103,11 +105,19 @@ class _MyHomePageState extends State<MyHomePage> {
           // action in the IDE, or press "p" in the console), to see the
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
+          spacing: 20.0,
           children: <Widget>[
-            const Text('You have pushed the button this many times:'),
+            Text("Hello! Muhammed"),
+            Text('You have pushed the button this many times:'),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
+            ),
+            IconButton.outlined(
+              onPressed: () => Void,
+              icon: Icon(Icons.access_alarm),
+              hoverColor: Color.fromARGB(255, 2, 14, 240),
+              tooltip: "Alarm icon",
             ),
           ],
         ),
@@ -120,4 +130,3 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 }
-
